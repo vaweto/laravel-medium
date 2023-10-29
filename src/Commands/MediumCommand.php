@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Vaweto\Medium\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MediumCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-medium';
 
     public $description = 'My command';
 
