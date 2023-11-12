@@ -14,13 +14,9 @@ class ArticleData
         public string $guid,
         public Collection $categories,
         public Carbon $pubDate
-    )
-    {}
+    ) {
+    }
 
-    /**
-     * @param SimpleXMLElement $element
-     * @return ArticleData
-     */
     public static function fromXMLElement(SimpleXMLElement $element): ArticleData
     {
         $categories = collect();
@@ -31,13 +27,13 @@ class ArticleData
 
         $pubDate = Carbon::createFromFormat(
             'D, d M Y H:i:s \G\M\T',
-            (string)$element->pubDate
+            (string) $element->pubDate
         );
 
         return new self(
-            (string)$element->title,
-            (string)$element->link,
-            (string)$element->guid,
+            (string) $element->title,
+            (string) $element->link,
+            (string) $element->guid,
             $categories,
             $pubDate
         );

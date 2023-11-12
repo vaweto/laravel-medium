@@ -5,8 +5,6 @@ namespace Vaweto\Medium;
 use Illuminate\Support\Collection;
 use SimpleXMLElement;
 use Vaweto\Medium\DataTransferObjects\ArticleData;
-use Vaweto\Medium\RssReader;
-
 
 class MediumRssReader implements RssReader
 {
@@ -14,7 +12,7 @@ class MediumRssReader implements RssReader
 
     public Collection $articles;
 
-    public function __construct(String $body)
+    public function __construct(string $body)
     {
         try {
             $this->xml = new SimpleXMLElement($body);
@@ -23,9 +21,6 @@ class MediumRssReader implements RssReader
         }
     }
 
-    /**
-     * @return Collection
-     */
     public function getArticles(): Collection
     {
         $this->articles = collect();
