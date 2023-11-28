@@ -2,11 +2,8 @@
 
 namespace Vaweto\Medium;
 
-use Vaweto\Medium\Exception\InvalidXMLException;
-
 class Medium
 {
-
     public function getUserFeed($user)
     {
         $feed = (new UserFeed())->get($user);
@@ -28,6 +25,4 @@ class Medium
     {
 
     }
-
-
 }

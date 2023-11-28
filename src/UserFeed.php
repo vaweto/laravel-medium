@@ -2,8 +2,6 @@
 
 namespace Vaweto\Medium;
 
-use Illuminate\Support\Facades\Http;
-
 class UserFeed
 {
     private Client $client;
@@ -13,10 +11,10 @@ class UserFeed
         $this->client = new Client();
     }
 
-    public function get($name) {
+    public function get($name)
+    {
         return $this->client->get(
-            config('medium.feed_urls.user') . '@' .$name
+            config('medium.feed_urls.user').'@'.$name
         );
     }
-
 }
