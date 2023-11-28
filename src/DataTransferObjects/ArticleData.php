@@ -15,8 +15,8 @@ class ArticleData
         public string $guid,
         public Collection $categories,
         public Carbon $pubDate
-    )
-    {}
+    ) {
+    }
 
     /**
      * @param SimpleXMLElement $element

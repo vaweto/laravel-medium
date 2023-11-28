@@ -17,7 +17,7 @@ class MediumRssReader implements RssReader
 
     public Collection $articles;
 
-    public function __construct(String $body)
+    public function __construct(string $body)
     {
         try {
             $this->xml = new SimpleXMLElement($body);
