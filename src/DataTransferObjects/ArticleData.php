@@ -18,10 +18,6 @@ class ArticleData
     ) {
     }
 
-    /**
-     * @param SimpleXMLElement $element
-     * @return ArticleData
-     */
     public static function fromXMLElement(SimpleXMLElement $element): ArticleData
     {
         $categories = collect();
@@ -30,12 +26,12 @@ class ArticleData
             $categories->push($category);
         }
 
-        $pubDate = Helpers::formatMediumDate((string)$element->pubDate);
+        $pubDate = Helpers::formatMediumDate((string) $element->pubDate);
 
         return new self(
-            title: (string)$element->title,
-            link: (string)$element->link,
-            guid: (string)$element->guid,
+            title: (string) $element->title,
+            link: (string) $element->link,
+            guid: (string) $element->guid,
             categories: $categories,
             pubDate: $pubDate
         );

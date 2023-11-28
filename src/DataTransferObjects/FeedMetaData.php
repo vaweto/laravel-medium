@@ -14,22 +14,18 @@ class FeedMetaData
         public string $link,
         public string $imageUrl,
         public Carbon $lastBuildDate
-    )
-    {}
+    ) {
+    }
 
-    /**
-     * @param SimpleXMLElement $element
-     * @return FeedMetaData
-     */
     public static function fromXMLElement(SimpleXMLElement $element): FeedMetaData
     {
-        $pubDate = Helpers::formatMediumDate((string)$element->lastBuildDate);
+        $pubDate = Helpers::formatMediumDate((string) $element->lastBuildDate);
 
         return new self(
-            title: (string)$element->title,
-            description: (string)$element->description,
-            link: (string)$element->link,
-            imageUrl: (string)$element->image->url,
+            title: (string) $element->title,
+            description: (string) $element->description,
+            link: (string) $element->link,
+            imageUrl: (string) $element->image->url,
             lastBuildDate: $pubDate
         );
     }

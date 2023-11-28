@@ -4,14 +4,14 @@ use Vaweto\Medium\DataTransferObjects\ArticleData;
 use Vaweto\Medium\MediumRssReader;
 
 it('can get articles from an user feed xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/test.xml');
+    $content = file_get_contents(__DIR__.'/xml/test.xml');
     $reader = new MediumRssReader($content);
 
     expect($reader->getArticles()->count())->toEqual(10);
 });
 
 it('can get articles from an tag feed xml ', function () {
-    $content = file_get_contents(__DIR__ .'/xml/tag.xml');
+    $content = file_get_contents(__DIR__.'/xml/tag.xml');
     $reader = new MediumRssReader($content);
 
     expect($reader->getArticles()->count())->toEqual(10);
@@ -70,61 +70,61 @@ it('can get articles published date from an xml', function () {
 });
 
 it('can get meta feed title from an xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/tag.xml');
+    $content = file_get_contents(__DIR__.'/xml/tag.xml');
     $reader = new MediumRssReader($content);
 
     $meta = $reader->getMetaDetails();
 
     expect($meta->title)
-        ->toEqual("Laravel on Medium");
+        ->toEqual('Laravel on Medium');
 });
 
 it('can get meta user profile title from an xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/test.xml');
+    $content = file_get_contents(__DIR__.'/xml/test.xml');
     $reader = new MediumRssReader($content);
 
     $meta = $reader->getMetaDetails();
 
     expect($meta->title)
-        ->toEqual("Stories by Miladev95 on Medium");
+        ->toEqual('Stories by Miladev95 on Medium');
 });
 
 it('can get meta feed description from an xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/tag.xml');
+    $content = file_get_contents(__DIR__.'/xml/tag.xml');
     $reader = new MediumRssReader($content);
 
     $meta = $reader->getMetaDetails();
 
     expect($meta->description)
-        ->toEqual("Latest stories tagged with Laravel on Medium");
+        ->toEqual('Latest stories tagged with Laravel on Medium');
 });
 
 it('can get meta feed link from an xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/tag.xml');
+    $content = file_get_contents(__DIR__.'/xml/tag.xml');
     $reader = new MediumRssReader($content);
 
     $meta = $reader->getMetaDetails();
 
     expect($meta->link)
-        ->toEqual("https://medium.com/tag/laravel/latest?source=rss------laravel-5");
+        ->toEqual('https://medium.com/tag/laravel/latest?source=rss------laravel-5');
 });
 
 it('can get meta feed imageurl from an xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/tag.xml');
+    $content = file_get_contents(__DIR__.'/xml/tag.xml');
     $reader = new MediumRssReader($content);
 
     $meta = $reader->getMetaDetails();
 
     expect($meta->imageUrl)
-        ->toEqual("https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png");
+        ->toEqual('https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png');
 });
 
 it('can get meta feed last published date from an xml', function () {
-    $content = file_get_contents(__DIR__ .'/xml/tag.xml');
+    $content = file_get_contents(__DIR__.'/xml/tag.xml');
     $reader = new MediumRssReader($content);
 
     $meta = $reader->getMetaDetails();
 
     expect($meta->lastBuildDate->toDateString())
-        ->toEqual("2023-11-28");
+        ->toEqual('2023-11-28');
 });
