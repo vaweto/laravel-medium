@@ -8,8 +8,6 @@ use SimpleXMLElement;
 use Vaweto\Medium\DataTransferObjects\ArticleData;
 use Vaweto\Medium\DataTransferObjects\FeedMetaData;
 use Vaweto\Medium\Exception\InvalidXMLException;
-use Vaweto\Medium\RssReader;
-
 
 class MediumRssReader implements RssReader
 {
@@ -26,9 +24,6 @@ class MediumRssReader implements RssReader
         }
     }
 
-    /**
-     * @return Collection
-     */
     public function getArticles(): Collection
     {
         $this->articles = collect();
