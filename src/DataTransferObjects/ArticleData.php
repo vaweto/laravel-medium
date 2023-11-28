@@ -27,7 +27,7 @@ class ArticleData
         $categories = collect();
 
         foreach ($element->category as $category) {
-            $categories->push($category);
+            $categories->push((string)$category);
         }
 
         $pubDate = Helpers::formatMediumDate((string)$element->pubDate);

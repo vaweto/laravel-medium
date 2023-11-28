@@ -13,9 +13,9 @@ use Vaweto\Medium\RssReader;
 
 class MediumRssReader implements RssReader
 {
-    protected SimpleXMLElement $xml;
+    private SimpleXMLElement $xml;
 
-    public Collection $articles;
+    protected Collection $articles;
 
     public function __construct(string $body)
     {
