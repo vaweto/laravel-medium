@@ -5,6 +5,7 @@ namespace Vaweto\Medium\DataTransferObjects;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use SimpleXMLElement;
+use Vaweto\Medium\Helpers\Helpers;
 
 class ArticleData
 {
@@ -29,17 +30,14 @@ class ArticleData
             $categories->push($category);
         }
 
-        $pubDate = Carbon::createFromFormat(
-            'D, d M Y H:i:s \G\M\T',
-            (string)$element->pubDate
-        );
+        $pubDate = Helpers::formatMediumDate((string)$element->pubDate);
 
         return new self(
-            (string)$element->title,
-            (string)$element->link,
-            (string)$element->guid,
-            $categories,
-            $pubDate
+            title: (string)$element->title,
+            link: (string)$element->link,
+            guid: (string)$element->guid,
+            categories: $categories,
+            pubDate: $pubDate
         );
     }
 }

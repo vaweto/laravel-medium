@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html">
+    <channel>
+        <title><![CDATA[Laravel on Medium]]></title>
+        <description><![CDATA[Latest stories tagged with Laravel on Medium]]></description>
+        <link>https://medium.com/tag/laravel/latest?source=rss------laravel-5</link>
+        <image>
+            <url>https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png</url>
+            <title>Laravel on Medium</title>
+            <link>https://medium.com/tag/laravel/latest?source=rss------laravel-5</link>
+        </image>
+        <generator>Medium</generator>
+        <lastBuildDate>Tue, 28 Nov 2023 18:15:30 GMT</lastBuildDate>
+        <atom:link href="https://medium.com/feed/tag/laravel" rel="self" type="application/rss+xml"/>
+        <webMaster><![CDATA[yourfriends@medium.com]]></webMaster>
+        <atom:link href="http://medium.superfeedr.com" rel="hub"/>
+        <item>
+            <title><![CDATA[Tips coding: Melacak Query Terakhir di Laravel 10x Menggunakan Query Log]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://bangshima.medium.com/panduan-praktis-melacak-query-terakhir-di-laravel-10x-menggunakan-query-log-9ac0ae3089a0?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/1185/0*BtCrRia7Mue0QwZM" width="1185"></a></p><p class="medium-feed-snippet">Saat kita sedang mengembangkan aplikasi web menggunakan Framework Laravel 10x dan melakukan manipulasi data ke database menggunakan&#x2026;</p><p class="medium-feed-link"><a href="https://bangshima.medium.com/panduan-praktis-melacak-query-terakhir-di-laravel-10x-menggunakan-query-log-9ac0ae3089a0?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://bangshima.medium.com/panduan-praktis-melacak-query-terakhir-di-laravel-10x-menggunakan-query-log-9ac0ae3089a0?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/9ac0ae3089a0</guid>
+            <category><![CDATA[tutorial]]></category>
+            <category><![CDATA[bang-shima]]></category>
+            <category><![CDATA[software-engineering]]></category>
+            <category><![CDATA[programming]]></category>
+            <category><![CDATA[laravel]]></category>
+            <dc:creator><![CDATA[Bang Shima]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 17:05:46 GMT</pubDate>
+            <atom:updated>2023-11-28T17:15:53.370Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Composer: Your requirements could not be resolved to an installable set of packages]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://salifyataala.medium.com/composer-your-requirements-could-not-be-resolved-to-an-installable-set-of-packages-dffffab77d70?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/2600/1*ZDrHXbvGHHH7CNHo_iDLkQ.jpeg" width="4516"></a></p><p class="medium-feed-snippet">We should make sure to regularly sharpen our tools, as they might become dull. I haven&#x2019;t worked with PHP and Composer for quite some time&#x2026;</p><p class="medium-feed-link"><a href="https://salifyataala.medium.com/composer-your-requirements-could-not-be-resolved-to-an-installable-set-of-packages-dffffab77d70?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://salifyataala.medium.com/composer-your-requirements-could-not-be-resolved-to-an-installable-set-of-packages-dffffab77d70?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/dffffab77d70</guid>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[composerphp]]></category>
+            <dc:creator><![CDATA[Salifyanji Taala]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 16:23:12 GMT</pubDate>
+            <atom:updated>2023-11-28T16:23:12.612Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Laravel 眉眉角角 — 薛丁格的 authentication 與 Laravel auth 機制淺談]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-snippet">&#x6211;&#x7684; request &#x8655;&#x65BC;&#x4E00;&#x7A2E;&#x5DF2;&#x7D93; logout &#x537B;&#x53C8;&#x80FD;&#x5920; authenticate &#x7684;&#x758A;&#x52A0;&#x614B;&#x2026;</p><p class="medium-feed-link"><a href="https://medium.com/@40243105s/laravel-%E7%9C%89%E7%9C%89%E8%A7%92%E8%A7%92-%E8%96%9B%E4%B8%81%E6%A0%BC%E7%9A%84-authentication-%E8%88%87-laravel-auth-%E6%A9%9F%E5%88%B6%E6%B7%BA%E8%AB%87-4f8cb1917ed8?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@40243105s/laravel-%E7%9C%89%E7%9C%89%E8%A7%92%E8%A7%92-%E8%96%9B%E4%B8%81%E6%A0%BC%E7%9A%84-authentication-%E8%88%87-laravel-auth-%E6%A9%9F%E5%88%B6%E6%B7%BA%E8%AB%87-4f8cb1917ed8?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/4f8cb1917ed8</guid>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[testing]]></category>
+            <category><![CDATA[laravel-guard]]></category>
+            <category><![CDATA[authentication]]></category>
+            <dc:creator><![CDATA[SleeperShark]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 14:45:58 GMT</pubDate>
+            <atom:updated>2023-11-28T15:01:57.706Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Efficient Testing with Laravel: Harnessing Data Providers and Datasets]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@laravelprotips/efficient-testing-with-laravel-harnessing-data-providers-and-datasets-8d2395fdfccd?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/1080/0*3jwafMyz83a6PQFs" width="1080"></a></p><p class="medium-feed-snippet">Automated testing is crucial in modern software development, particularly for diverse input data validation. Laravel streamlines this with&#x2026;</p><p class="medium-feed-link"><a href="https://medium.com/@laravelprotips/efficient-testing-with-laravel-harnessing-data-providers-and-datasets-8d2395fdfccd?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@laravelprotips/efficient-testing-with-laravel-harnessing-data-providers-and-datasets-8d2395fdfccd?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/8d2395fdfccd</guid>
+            <category><![CDATA[data-provider]]></category>
+            <category><![CDATA[dataset]]></category>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[laravel-tips-and-tricks]]></category>
+            <dc:creator><![CDATA[Laravel Pro Tips]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 12:16:53 GMT</pubDate>
+            <atom:updated>2023-11-28T12:16:53.014Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[️ Fixing the “Unable to Determine Linked PHP” Error]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@oktaykopcak/%EF%B8%8F-fixing-the-unable-to-determine-linked-php-error-5d0337bdf14c?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/2600/0*phOmawlNX8gPdTUd" width="4752"></a></p><p class="medium-feed-snippet">Here&#x2019;s the step-by-step solution</p><p class="medium-feed-link"><a href="https://medium.com/@oktaykopcak/%EF%B8%8F-fixing-the-unable-to-determine-linked-php-error-5d0337bdf14c?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@oktaykopcak/%EF%B8%8F-fixing-the-unable-to-determine-linked-php-error-5d0337bdf14c?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/5d0337bdf14c</guid>
+            <category><![CDATA[bug-fixes]]></category>
+            <category><![CDATA[valet]]></category>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[php]]></category>
+            <dc:creator><![CDATA[oktay]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 10:46:44 GMT</pubDate>
+            <atom:updated>2023-11-28T10:46:44.218Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Laravel vs. Symfony : Deux Approches Distinctes pour le Développement Web en PHP]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-snippet">Introduction</p><p class="medium-feed-link"><a href="https://medium.com/@martinlechene/laravel-vs-symfony-deux-approches-distinctes-pour-le-d%C3%A9veloppement-web-en-php-5675114bb25c?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@martinlechene/laravel-vs-symfony-deux-approches-distinctes-pour-le-d%C3%A9veloppement-web-en-php-5675114bb25c?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/5675114bb25c</guid>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[symfony]]></category>
+            <dc:creator><![CDATA[Martin L]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 10:37:29 GMT</pubDate>
+            <atom:updated>2023-11-28T10:37:29.409Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Laravel notification with custom channel]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-snippet">In this tutorial I will explain how to implement Laravel notification to use custom channel.</p><p class="medium-feed-link"><a href="https://medium.com/@amirranjbar.dev/laravel-notification-with-custom-channel-b5ba1549840b?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@amirranjbar.dev/laravel-notification-with-custom-channel-b5ba1549840b?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/b5ba1549840b</guid>
+            <category><![CDATA[notifications]]></category>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[telegram]]></category>
+            <dc:creator><![CDATA[Amir ranjbar]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 08:49:04 GMT</pubDate>
+            <atom:updated>2023-11-28T08:49:04.080Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Laravel — PHP Framework]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@oliviaayora/laravel-php-framework-6769d797f4b3?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/727/1*JLKV-9SZPhB8knJLY5XKag.png" width="727"></a></p><p class="medium-feed-snippet">Features of Laravel</p><p class="medium-feed-link"><a href="https://medium.com/@oliviaayora/laravel-php-framework-6769d797f4b3?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@oliviaayora/laravel-php-framework-6769d797f4b3?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/6769d797f4b3</guid>
+            <category><![CDATA[laravel-framework]]></category>
+            <category><![CDATA[software-development]]></category>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[backend-development]]></category>
+            <category><![CDATA[laravel]]></category>
+            <dc:creator><![CDATA[Olivia A.O]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 07:55:03 GMT</pubDate>
+            <atom:updated>2023-11-28T07:55:03.197Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Langkah-langkah Instalasi Laravel]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@ardian678/langkah-langkah-instalasi-laravel-31af2c3eb94b?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/2000/0*y3CrGa1b-wSGdi8C.png" width="2000"></a></p><p class="medium-feed-snippet">Apa itu Laravel?</p><p class="medium-feed-link"><a href="https://medium.com/@ardian678/langkah-langkah-instalasi-laravel-31af2c3eb94b?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@ardian678/langkah-langkah-instalasi-laravel-31af2c3eb94b?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/31af2c3eb94b</guid>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[install]]></category>
+            <category><![CDATA[application]]></category>
+            <category><![CDATA[coding]]></category>
+            <dc:creator><![CDATA[Ardian Arya Putra]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 05:08:56 GMT</pubDate>
+            <atom:updated>2023-11-28T05:08:56.084Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Developing Dynamic Polar Area Charts in Laravel Using Chart.js: A Step-by-Step Guide]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://arjunamrutiya.medium.com/developing-dynamic-polar-area-charts-in-laravel-using-chart-js-a-step-by-step-guide-4a594d820280?source=rss------laravel-5"><img src="https://cdn-images-1.medium.com/max/2057/1*wY1WvFDfvgtFG-SMqNCqcw.png" width="2057"></a></p><p class="medium-feed-snippet">Introduction:
+Polar area charts provide a visually appealing way to represent data in a circular format. In this tutorial, we&#x2019;ll guide you&#x2026;</p><p class="medium-feed-link"><a href="https://arjunamrutiya.medium.com/developing-dynamic-polar-area-charts-in-laravel-using-chart-js-a-step-by-step-guide-4a594d820280?source=rss------laravel-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://arjunamrutiya.medium.com/developing-dynamic-polar-area-charts-in-laravel-using-chart-js-a-step-by-step-guide-4a594d820280?source=rss------laravel-5</link>
+            <guid isPermaLink="false">https://medium.com/p/4a594d820280</guid>
+            <category><![CDATA[laravel]]></category>
+            <category><![CDATA[data-visulization]]></category>
+            <category><![CDATA[chartjs]]></category>
+            <category><![CDATA[polar-chart]]></category>
+            <category><![CDATA[javascript]]></category>
+            <dc:creator><![CDATA[ArjunAmrutiya]]></dc:creator>
+            <pubDate>Tue, 28 Nov 2023 03:31:02 GMT</pubDate>
+            <atom:updated>2023-11-28T03:31:02.630Z</atom:updated>
+        </item>
+    </channel>
+</rss>

@@ -2,9 +2,12 @@
 
 namespace Vaweto\Medium;
 
+use Exception;
 use Illuminate\Support\Collection;
 use SimpleXMLElement;
 use Vaweto\Medium\DataTransferObjects\ArticleData;
+use Vaweto\Medium\DataTransferObjects\FeedMetaData;
+use Vaweto\Medium\Exception\InvalidXMLException;
 use Vaweto\Medium\RssReader;
 
 
@@ -18,8 +21,8 @@ class MediumRssReader implements RssReader
     {
         try {
             $this->xml = new SimpleXMLElement($body);
-        } catch (\Exception $e) {
-            throw new \Exception('test'); //Todo throw a custom exception
+        } catch (Exception $e) {
+            throw new InvalidXMLException(message: 'The string is not a valid xml');
         }
     }
 
@@ -35,5 +38,10 @@ class MediumRssReader implements RssReader
         }
 
         return $this->articles;
+    }
+
+    public function getMetaDetails(): FeedMetaData
+    {
+        return FeedMetaData::fromXMLElement($this->xml->channel);
     }
 }
