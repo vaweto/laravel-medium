@@ -27,19 +27,15 @@ class Medium
         return new MediumRssReader($feed);
     }
 
-    /**
-     * @param ...$data
-     * @return Collection|null
-     */
     public function getMultipleTagFeed(...$data): ?Collection
     {
         $data = collect($data)->flatten();
 
-        $data = $data->map(function($tag) {
+        $data = $data->map(function ($tag) {
             try {
                 return $this->getTagFeed($tag)->getArticles();
             } catch (Exception|InvalidXMLException $exception) {
-                logger($tag . 'is not a valid tag');
+                logger($tag.'is not a valid tag');
             }
         });
 

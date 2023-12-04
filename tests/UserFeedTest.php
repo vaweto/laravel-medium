@@ -11,4 +11,3 @@ it('can get a user feed by facade', function () {
 
     expect($results->getArticles()->count())->toEqual(10);
 });
-

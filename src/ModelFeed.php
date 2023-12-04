@@ -2,9 +2,8 @@
 
 namespace Vaweto\Medium;
 
-Abstract Class ModelFeed
+abstract class ModelFeed
 {
-
     protected Client $client;
 
     public function __construct()

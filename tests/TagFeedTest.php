@@ -12,7 +12,6 @@ it('can get a tag feed by facade', function () {
     expect($results->getArticles()->count())->toEqual(10);
 });
 
-
 it('can get multiple tag feed', function () {
     $results = (new \Vaweto\Medium\Medium())->getMultipleTagFeed('laravel', 'design-patterns');
 
@@ -20,7 +19,7 @@ it('can get multiple tag feed', function () {
 });
 
 it('invalid tag does bypassed', function () {
-    $results = (new \Vaweto\Medium\Medium())->getMultipleTagFeed('laravel', 'test me invalid','design-patterns');
+    $results = (new \Vaweto\Medium\Medium())->getMultipleTagFeed('laravel', 'test me invalid', 'design-patterns');
 
     expect($results->count())->toEqual(20);
 });
