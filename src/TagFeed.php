@@ -2,12 +2,12 @@
 
 namespace Vaweto\Medium;
 
-class UserFeed extends ModelFeed
+class TagFeed extends ModelFeed
 {
     public function get($name)
     {
         return $this->client->get(
-            config('medium.feed_urls.user').'@'.$name
+            config('medium.feed_urls.tag') . $name
         );
     }
 }
