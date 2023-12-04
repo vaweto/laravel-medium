@@ -17,7 +17,17 @@ class Medium
 
     public function getMultipleUserFeed(...$users)
     {
+        $users = collect($users)->flatten();
 
+        $data = $users->map(function ($user) {
+            try {
+                return $this->getUserFeed($user)->getArticles();
+            } catch (Exception|InvalidXMLException $exception) {
+                logger($user . 'is not a valid tag');
+            }
+        });
+
+        return $data->flatten()->sortByDesc('pubDate')->values();
     }
 
     public function getTagFeed($tag)
