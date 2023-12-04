@@ -27,11 +27,11 @@ class Medium
         return new MediumRssReader($feed);
     }
 
-    public function getMultipleTagFeed(...$data): ?Collection
+    public function getMultipleTagFeed(...$tags): ?Collection
     {
-        $data = collect($data)->flatten();
+        $tags = collect($tags)->flatten();
 
-        $data = $data->map(function ($tag) {
+        $data = $tags->map(function ($tag) {
             try {
                 return $this->getTagFeed($tag)->getArticles();
             } catch (Exception|InvalidXMLException $exception) {
