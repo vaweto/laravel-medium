@@ -31,7 +31,7 @@ class Medium
             return $this->getFeedByType($feed->name, $feed->type);
         }
 
-        return $this->getFeedByType($feed, $type);
+        return $this->getFeedByType($feed, $type->value);
     }
 
     public function getUserFeed($user): MediumRssReader
