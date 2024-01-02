@@ -17,7 +17,7 @@ class Client
                 $url
             );
 
-        if( $response->successful() ) {
+        if ($response->successful()) {
             return $response->body();
         }
 

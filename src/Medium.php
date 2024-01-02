@@ -16,18 +16,18 @@ class Medium
     {
         $data = $feeds->map(function ($feed) {
             try {
-                return $this->getFeed($feed, MediumFeedType::from($feed->type) )->getArticles();
+                return $this->getFeed($feed, MediumFeedType::from($feed->type))->getArticles();
             } catch (Exception|InvalidXMLException $exception) {
-                logger($feed . 'is not a valid tag');
+                logger($feed.'is not a valid tag');
             }
         });
 
-        return $data->flatten()->reject(fn($item) => is_null($item))->sortByDesc('pubDate')->values();
+        return $data->flatten()->reject(fn ($item) => is_null($item))->sortByDesc('pubDate')->values();
     }
 
-    public function getFeed(MediumFeed|string $feed, ?MediumFeedType $type = null):MediumRssReader
+    public function getFeed(MediumFeed|string $feed, ?MediumFeedType $type = null): MediumRssReader
     {
-        if($feed instanceof MediumFeed) {
+        if ($feed instanceof MediumFeed) {
             return $this->getFeedByType($feed->name, $feed->type);
         }
 
@@ -37,7 +37,7 @@ class Medium
     public function getUserFeed($user): MediumRssReader
     {
         if (config('medium.caching.enabled')) {
-            $feed = Cache::remember('user-'. $user, config('medium.caching.time_in_second'), function () use ($user){
+            $feed = Cache::remember('user-'.$user, config('medium.caching.time_in_second'), function () use ($user) {
                 return (new UserFeed())->get($user);
             });
         } else {
@@ -55,17 +55,17 @@ class Medium
             try {
                 return $this->getUserFeed($user)->getArticles();
             } catch (Exception|InvalidXMLException $exception) {
-                logger($user . 'is not a valid tag');
+                logger($user.'is not a valid tag');
             }
         });
 
-        return $data->flatten()->reject(fn($item) => is_null($item))->sortByDesc('pubDate')->values();
+        return $data->flatten()->reject(fn ($item) => is_null($item))->sortByDesc('pubDate')->values();
     }
 
     public function getTagFeed($tag): MediumRssReader
     {
         if (config('medium.caching.enabled')) {
-            $feed = Cache::remember('tag-'. $tag, config('medium.caching.time_in_second'), function () use ($tag){
+            $feed = Cache::remember('tag-'.$tag, config('medium.caching.time_in_second'), function () use ($tag) {
                 return (new TagFeed())->get($tag);
             });
         } else {
@@ -87,13 +87,10 @@ class Medium
             }
         });
 
-        return $data->flatten()->reject(fn($item) => is_null($item))->sortByDesc('pubDate')->values();
+        return $data->flatten()->reject(fn ($item) => is_null($item))->sortByDesc('pubDate')->values();
     }
 
     /**
-     * @param string $name
-     * @param string $type
-     * @return MediumRssReader
      * @throws InvalidFeedTypeException
      */
     public function getFeedByType(string $name, string $type): MediumRssReader
