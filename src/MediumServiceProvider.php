@@ -4,7 +4,6 @@ namespace Vaweto\Medium;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Vaweto\Medium\Commands\MediumCommand;
 
 class MediumServiceProvider extends PackageServiceProvider
 {
