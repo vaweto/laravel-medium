@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Vaweto\Medium\Definitions\MediumFeedType;
 use Vaweto\Medium\Models\MediumFeed;
 
-
 class MediumFeedFactory extends Factory
 {
     protected $model = MediumFeed::class;
@@ -16,8 +15,7 @@ class MediumFeedFactory extends Factory
         return [
             'name' => $this->faker->name,
             'type' => MediumFeedType::TAG->value,
-            'user_id' => $this->faker->randomNumber()
+            'user_id' => $this->faker->randomNumber(),
         ];
     }
 }
-

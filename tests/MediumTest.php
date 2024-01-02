@@ -9,8 +9,8 @@ it('can get a feed per type', function (MediumFeed $feed) {
 
     expect($results->getArticles()->count())->toEqual(10);
 })->with([
-    fn() => MediumFeed::factory()->create(['name' => 'laravel']),
-    fn() => MediumFeed::factory()->create(['name' => 'shaunthornburgh', 'type' => MediumFeedType::USER->value])
+    fn () => MediumFeed::factory()->create(['name' => 'laravel']),
+    fn () => MediumFeed::factory()->create(['name' => 'shaunthornburgh', 'type' => MediumFeedType::USER->value]),
 ]);
 
 it('can get a feed without model per type', function (string $feed, MediumFeedType $type) {
@@ -19,9 +19,8 @@ it('can get a feed without model per type', function (string $feed, MediumFeedTy
     expect($results->getArticles()->count())->toEqual(10);
 })->with([
     ['laravel', MediumFeedType::TAG],
-    ['shaunthornburgh', MediumFeedType::USER]
+    ['shaunthornburgh', MediumFeedType::USER],
 ]);
-
 
 it('can get all feed from collection', function () {
     MediumFeed::factory()->create(['name' => 'laravel']);
@@ -32,4 +31,3 @@ it('can get all feed from collection', function () {
 
     expect($results->count())->toEqual(30);
 });
-
