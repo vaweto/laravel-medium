@@ -2,15 +2,25 @@
 
 namespace Vaweto\Medium;
 
+use Illuminate\Http\Client\HttpClientException;
 use Illuminate\Support\Facades\Http;
 
 class Client
 {
-    public function get($url): string
+    /**
+     * @throws HttpClientException
+     */
+    public function get($url): ?string
     {
-        return Http::withToken(config('medium.api_token'))
+        $response = Http::withToken(config('medium.api_token'))
             ->get(
                 $url
-            )->body();
+            );
+
+        if( $response->successful() ) {
+            return $response->body();
+        }
+
+        throw new HttpClientException();
     }
 }

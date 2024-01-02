@@ -8,10 +8,11 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('laravel_medium_table', function (Blueprint $table) {
+        Schema::create('medium_feeds', function (Blueprint $table) {
             $table->id();
-
-            // add fields
+            $table->string('name')->unique();
+            $table->string('type');
+            $table->foreignId('user_id')->constrained()->nullable()->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -4,18 +4,50 @@ namespace Vaweto\Medium;
 
 use Exception;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
+use Vaweto\Medium\Definitions\MediumFeedType;
+use Vaweto\Medium\Exception\InvalidFeedTypeException;
 use Vaweto\Medium\Exception\InvalidXMLException;
+use Vaweto\Medium\Models\MediumFeed;
 
 class Medium
 {
-    public function getUserFeed($user)
+    public function all(Collection $feeds): ?Collection
     {
-        $feed = (new UserFeed())->get($user);
+        $data = $feeds->map(function ($feed) {
+            try {
+                return $this->getFeed($feed, MediumFeedType::from($feed->type) )->getArticles();
+            } catch (Exception|InvalidXMLException $exception) {
+                logger($feed . 'is not a valid tag');
+            }
+        });
+
+        return $data->flatten()->reject(fn($item) => is_null($item))->sortByDesc('pubDate')->values();
+    }
+
+    public function getFeed(MediumFeed|string $feed, ?MediumFeedType $type = null):MediumRssReader
+    {
+        if($feed instanceof MediumFeed) {
+            return $this->getFeedByType($feed->name, $feed->type);
+        }
+
+        return $this->getFeedByType($feed, $type);
+    }
+
+    public function getUserFeed($user): MediumRssReader
+    {
+        if (config('medium.caching.enabled')) {
+            $feed = Cache::remember('user-'. $user, config('medium.caching.time_in_second'), function () use ($user){
+                return (new UserFeed())->get($user);
+            });
+        } else {
+            $feed = (new UserFeed())->get($user);
+        }
 
         return new MediumRssReader($feed);
     }
 
-    public function getMultipleUserFeed(...$users)
+    public function getMultipleUserFeed(...$users): ?Collection
     {
         $users = collect($users)->flatten();
 
@@ -27,12 +59,18 @@ class Medium
             }
         });
 
-        return $data->flatten()->sortByDesc('pubDate')->values();
+        return $data->flatten()->reject(fn($item) => is_null($item))->sortByDesc('pubDate')->values();
     }
 
-    public function getTagFeed($tag)
+    public function getTagFeed($tag): MediumRssReader
     {
-        $feed = (new TagFeed())->get($tag);
+        if (config('medium.caching.enabled')) {
+            $feed = Cache::remember('tag-'. $tag, config('medium.caching.time_in_second'), function () use ($tag){
+                return (new TagFeed())->get($tag);
+            });
+        } else {
+            $feed = (new TagFeed())->get($tag);
+        }
 
         return new MediumRssReader($feed);
     }
@@ -49,6 +87,21 @@ class Medium
             }
         });
 
-        return $data->flatten()->sortByDesc('pubDate')->values();
+        return $data->flatten()->reject(fn($item) => is_null($item))->sortByDesc('pubDate')->values();
+    }
+
+    /**
+     * @param string $name
+     * @param string $type
+     * @return MediumRssReader
+     * @throws InvalidFeedTypeException
+     */
+    public function getFeedByType(string $name, string $type): MediumRssReader
+    {
+        return match ($type) {
+            MediumFeedType::TAG->value => $this->getTagFeed($name),
+            MediumFeedType::USER->value => $this->getUserFeed($name),
+            default => throw new InvalidFeedTypeException()
+        };
     }
 }
