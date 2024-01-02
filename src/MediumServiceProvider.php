@@ -19,7 +19,6 @@ class MediumServiceProvider extends PackageServiceProvider
             ->name('laravel-medium')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_medium_table')
-            ->hasCommand(MediumCommand::class);
+            ->hasMigration('create_medium_table');
     }
 }
